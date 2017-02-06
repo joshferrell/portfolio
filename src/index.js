@@ -1,11 +1,12 @@
-'use strict'
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
+import { Console } from './console/components';
 
-const App = () => <h1>Hello World</h1>
+const App = () => <Console />
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-)
+ReactDOM.render((
+    <Router history={browserHistory}>
+        <Route path="/" component={App} />
+    </Router>
+), document.getElementById('root'));
