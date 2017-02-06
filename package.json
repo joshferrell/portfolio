@@ -1,0 +1,44 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "basic portfolio site for josh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --content-base dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshferrell/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "jsferrell",
+    "react",
+    "redux"
+  ],
+  "author": "Josh Ferrell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshferrell/portfolio/issues"
+  },
+  "homepage": "https://github.com/joshferrell/portfolio#readme",
+  "dependencies": {
+    "csjs": "^1.0.6",
+    "react": "^15.4.2",
+    "react-csjs": "^2.1.0",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-csjs-postcss": "^0.3.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "csswring": "^5.1.1",
+    "postcss-cssnext": "^2.9.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.3"
+  }
+}
