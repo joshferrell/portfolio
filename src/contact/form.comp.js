@@ -57,10 +57,6 @@ class ContactForm extends React.Component {
 };
 
 const styles = csjs`
-    .formGroup {
-        margin-left: 10px;
-    }
-
     .formGroup label,
     .formGroup input,
     .formGroup textarea {
@@ -76,7 +72,7 @@ const styles = csjs`
     .formGroup input,
     .formGroup textarea {
         font-size: 1.2em;
-        padding: 5px;
+        padding: 10px;
         margin: 5px 0 15px;
         border: 5px solid #00D2FF;
         width: 100%;
@@ -94,7 +90,6 @@ const styles = csjs`
     }
 
     .buttonGroup {
-        margin-left: 10px;
         max-width: 600px;
     }
 
@@ -141,10 +136,7 @@ const styles = csjs`
         .buttonGroup {
             display: flex;
             flex-flow: row nowrap;
-            margin-left: 0;
         }
-
-        .formGroup { margin: 0 }
     }
 `;
 

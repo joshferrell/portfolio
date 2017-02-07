@@ -4,7 +4,7 @@ import React from 'react';
 import csjs from 'csjs';
 import withStyles from 'react-csjs';
 import { Footer, Header, ConsoleInput } from './components';
-import { ContactForm } from '../contact/components';
+import { Contact } from '../contact/components';
 
 class Console extends React.Component {
     constructor(props) {
@@ -17,7 +17,7 @@ class Console extends React.Component {
             <div className={classes.console}>
                 <Header />
                 <ConsoleInput />
-                <ContactForm />
+                <Contact />
                 <Footer />
             </div>
         );
