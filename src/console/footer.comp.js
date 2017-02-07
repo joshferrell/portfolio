@@ -13,13 +13,13 @@ const Footer = ({ classes }) => (
         <div className={classes.externalLinks}>
             <ul>
                 <li>
-                    <a href="linkedin.com" target="_blank">
+                    <a href="https://www.linkedin.com/in/joshferrell/" target="_blank">
                         <span className="sr-only">LinkedIn Page</span>
                         <span className="fa fa-linkedin"></span>
                     </a>
                 </li>
                 <li>
-                    <a href="github.com" target="_blank">
+                    <a href="https://github.com/joshferrell" target="_blank">
                         <span className="sr-only">GitHub Page</span>
                         <span className="fa fa-github-alt"></span>
                     </a>
