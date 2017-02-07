@@ -26,13 +26,14 @@ const styles = csjs`
 
     .section pre {
         color: #00D2FF;
+        font-size: 1.5em;
     }
 
     .focusText {
         margin-left: 10px;
         line-height: 1.8em;
         font-size: 1.2em;
-        max-width: 500px;
+        max-width: 600px;
     }
 
     .section a {

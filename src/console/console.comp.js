@@ -3,17 +3,21 @@
 import React from 'react';
 import csjs from 'csjs';
 import withStyles from 'react-csjs';
-import { Footer, Header } from './components';
+import { Footer, Header, ConsoleInput } from './components';
+import { ContactForm } from '../contact/components';
 
 class Console extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         const { classes } = this.props;
         return (
             <div className={classes.console}>
                 <Header />
+                <ConsoleInput />
+                <ContactForm />
                 <Footer />
             </div>
         );
@@ -24,9 +28,10 @@ const styles = csjs`
     html {
         background-color: #363636;
         font-family: -apple-system, BlinkMacSystemFont,
-            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", 
+            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
             "Fira Sans", "Droid Sans", "Helvetica Neue",
             sans-serif;
+        padding-bottom: 90px;
     }
 
     ::selection {
