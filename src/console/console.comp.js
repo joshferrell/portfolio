@@ -12,11 +12,15 @@ class Console extends React.Component {
     }
 
     render() {
-        const { classes } = this.props;
+        const { consoleOutput, classes } = this.props;
         return (
             <div className={classes.console}>
                 <Header />
+                <div id="consoleOutput">
+                    { consoleOutput && consoleOutput }
+                </div>
                 <ConsoleInput />
+                <Contact />
                 <Footer />
             </div>
         );
@@ -31,6 +35,10 @@ const styles = csjs`
             "Fira Sans", "Droid Sans", "Helvetica Neue",
             sans-serif;
         padding-bottom: 90px;
+    }
+
+    #consoleOutput {
+        margin: 10px;
     }
 
     ::selection {

@@ -2,43 +2,71 @@
 
 import React from 'react';
 import csjs from 'csjs';
+import { browserHistory } from 'react-router';
 import withStyles from 'react-csjs';
 
 class ConsoleInput extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { value: '' };
+        this.state = { value: '', message: '' };
     }
 
     handleChange(e) {
-        Object.assign({}, this.state, { value: e.target.value });
+        this.setState(
+            Object.assign({}, this.state, { value: e.target.value })
+        );
+    }
+
+    handleSubmit(e) {
+        this.setState(
+            Object.assign({}, this.state, { message: ''})
+        );
+
+        switch(this.state.value) {
+            case 'help':
+                browserHistory.push('/help');
+                break;
+            default:
+                this.setState(
+                    Object.assign({}, this.state, { message: `${this.state.value}: command not found` })
+                );
+        }
+
+        return e.preventDefault();
     }
 
     render() {
         const { classes } = this.props;
         return (
-            <form className={classes.formTerminal}>
-                <div className={classes.formGroup}>
-                    <label className={classes.inputLabel} htmlFor="consoleInput">
-                        <span aria-hidden="true" className="fa fa-terminal"></span>
-                        <span className="sr-only">Console Input</span>
-                    </label>
-                    <input
-                        id="consoleInput"
-                        name="consoleInput"
-                        type="text"
-                        onChange={this.handleChange.bind(this)}
-                        autoFocus />
-                </div>
-            </form>
+            <div id="consoleInput">
+                <p className={classes.messageDisplay}>{this.state.message}</p>
+                <form className={classes.formTerminal} onSubmit={this.handleSubmit.bind(this)}>
+                    <div className={classes.formGroup}>
+                        <label className={classes.inputLabel} htmlFor="consoleText">
+                            <span aria-hidden="true" className="fa fa-terminal"></span>
+                            <span className="sr-only">Console Input</span>
+                        </label>
+                        <input
+                            id="consoleText"
+                            name="consoleText"
+                            type="text"
+                            value={this.state.value}
+                            onChange={this.handleChange.bind(this)}
+                            autoFocus />
+                    </div>
+                </form>
+            </div>
         )
     }
 };
 
 const styles = csjs`
+    #consoleInput {
+        margin-left: 10px;
+    }
+
     .inputLabel {
         font-size: 1.8em;
-        margin-left: 10px;
     }
 
     .formGroup {
