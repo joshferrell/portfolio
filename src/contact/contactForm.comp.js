@@ -31,6 +31,7 @@ class ContactForm extends React.Component {
                         id="name"
                         name="name"
                         type="text"
+                        required
                         onChange={this.handleInputChange.bind(this)}
                     />
                 </div>
@@ -40,12 +41,17 @@ class ContactForm extends React.Component {
                         id="email"
                         name="email"
                         type="email"
+                        required
                         onChange={this.handleInputChange.bind(this)}
                     />
                 </div>
                 <div className={classes.formGroup}>
                     <label htmlFor="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                    ></textarea>
                 </div>
                 <div className={classes.buttonGroup}>
                     <button className={classes.cancelButton}>Cancel</button>
@@ -81,12 +87,12 @@ const styles = csjs`
         background-color: transparent;
         color: white;
         box-sizing: border-box;
+        transition: border .35s ease-in-out;
     }
 
     .formGroup input:focus,
     .formGroup textarea:focus {
-        color: #363636;
-        background-color: white;
+        border-color: #EF629F;
     }
 
     .buttonGroup {
@@ -115,16 +121,16 @@ const styles = csjs`
     }
 
     .submitButton {
+        background: #00D2FF;
         background: linear-gradient(to left, #00D2FF, #3597D3);
         color: white;
         border: none;
     }
 
     .submitButton:hover {
-        color: #00D2FF;
-        background: transparent;
-        border: 5px solid #00D2FF;
-        padding: 11px !important;
+        background: #EECDA3;
+        background: -webkit-linear-gradient(to left, #EECDA3 , #EF629F);
+        background: linear-gradient(to left, #EECDA3 , #EF629F);
     }
 
     @media (max-width: 600px) {

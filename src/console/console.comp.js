@@ -17,7 +17,6 @@ class Console extends React.Component {
             <div className={classes.console}>
                 <Header />
                 <ConsoleInput />
-                <Contact />
                 <Footer />
             </div>
         );
