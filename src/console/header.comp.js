@@ -15,7 +15,7 @@ const Header = ({ classes }) => (
  | |__| |  | __/ |  | |  | __/ | |
   \\_____/  \\___|_|  |_|  \\___|_|_|`}
         </pre>
-        <p className={classes.focusText}>I'm a software developer and designer. You can see my <a href="/designs">design portfolio</a>, or type help() for a list of executable commands.</p>
+        <p className={classes.focusText}>I'm a software developer and designer. You can see my <a href="/designs">design portfolio</a>, or type help for a list of executable commands.</p>
     </header>
 );
 

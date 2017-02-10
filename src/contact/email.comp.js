@@ -3,7 +3,7 @@
 import React from 'react';
 import csjs from 'csjs';
 import withStyles from 'react-csjs';
-import { ContactForm } from './components';
+import { ContactForm } from './index';
 
 const Contact = ({ classes }) => (
     <section id="contact" className={classes.contact}>
@@ -15,7 +15,7 @@ const Contact = ({ classes }) => (
 
 const styles = csjs`
     .contact {
-        margin-left: 10px;
+        margin: 30px 10px;
     }
 
     .contact h2 {

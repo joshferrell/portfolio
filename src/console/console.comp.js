@@ -3,8 +3,8 @@
 import React from 'react';
 import csjs from 'csjs';
 import withStyles from 'react-csjs';
-import { Footer, Header, ConsoleInput } from './components';
-import { Contact } from '../contact/components';
+import { Footer, Header, ConsoleInput } from './index';
+import { Contact } from '../contact/index';
 
 class Console extends React.Component {
     constructor(props) {
@@ -12,15 +12,12 @@ class Console extends React.Component {
     }
 
     render() {
-        const { consoleOutput, classes } = this.props;
+        const { children, classes } = this.props;
         return (
             <div className={classes.console}>
                 <Header />
-                <div id="consoleOutput">
-                    { consoleOutput && consoleOutput }
-                </div>
+                {this.props.children}
                 <ConsoleInput />
-                <Contact />
                 <Footer />
             </div>
         );
@@ -30,10 +27,7 @@ class Console extends React.Component {
 const styles = csjs`
     html {
         background-color: #363636;
-        font-family: -apple-system, BlinkMacSystemFont,
-            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-            "Fira Sans", "Droid Sans", "Helvetica Neue",
-            sans-serif;
+        font-family: Inconsolatas, Consolas, 'Courier New', monospace;
         padding-bottom: 90px;
     }
 

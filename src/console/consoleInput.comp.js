@@ -26,7 +26,12 @@ class ConsoleInput extends React.Component {
             case 'help':
                 browserHistory.push('/help');
                 break;
+            case 'contact':
+                browserHistory.push('/contact');
+                break;
             default:
+                browserHistory.push('/message');
+
                 this.setState(
                     Object.assign({}, this.state, { message: `${this.state.value}: command not found` })
                 );
@@ -39,7 +44,6 @@ class ConsoleInput extends React.Component {
         const { classes } = this.props;
         return (
             <div id="consoleInput">
-                <p className={classes.messageDisplay}>{this.state.message}</p>
                 <form className={classes.formTerminal} onSubmit={this.handleSubmit.bind(this)}>
                     <div className={classes.formGroup}>
                         <label className={classes.inputLabel} htmlFor="consoleText">
@@ -52,6 +56,7 @@ class ConsoleInput extends React.Component {
                             type="text"
                             value={this.state.value}
                             onChange={this.handleChange.bind(this)}
+                            autoComplete="false"
                             autoFocus />
                     </div>
                 </form>

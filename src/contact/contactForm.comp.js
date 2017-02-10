@@ -3,6 +3,7 @@
 import React from 'react';
 import csjs from 'csjs';
 import withStyles from 'react-csjs';
+import { browserHistory } from 'react-router';
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -54,7 +55,10 @@ class ContactForm extends React.Component {
                     ></textarea>
                 </div>
                 <div className={classes.buttonGroup}>
-                    <button className={classes.cancelButton}>Cancel</button>
+                    <button
+                        className={classes.cancelButton}
+                        onClick={() => {browserHistory.goBack()}}
+                    >Cancel</button>
                     <button className={classes.submitButton}>Submit</button>
                 </div>
             </form>

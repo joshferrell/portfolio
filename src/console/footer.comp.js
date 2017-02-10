@@ -3,12 +3,13 @@
 import React from 'react';
 import csjs from 'csjs';
 import withStyles from 'react-csjs';
+import { Link } from 'react-router';
 
 const Footer = ({ classes }) => (
     <footer className={classes.footer}>
         <nav>
-            <a href="/">Home</a>
-            <a href="/contact">Contact</a>
+            <Link to="/">Home</Link>
+            <Link to="/contact">Contact</Link>
         </nav>
         <div className={classes.externalLinks}>
             <ul>
@@ -40,6 +41,10 @@ const styles = csjs`
         left: 0;
         bottom: 0;
         background: linear-gradient(to left, #00D2FF, #3597D3);
+        font-family: -apple-system, BlinkMacSystemFont,
+            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+            "Fira Sans", "Droid Sans", "Helvetica Neue",
+            sans-serif;
     }
 
     .footer nav {
